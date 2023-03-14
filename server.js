@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 
 // Require Notes Routes
 require('./app/routes/note.routes.js')(app);
-
+require('./app/models/note.model.js')(app);
 //app.use(bodyParser.urlencoded({ extended: true}))
 
 //app.use(bodyParser.json())
