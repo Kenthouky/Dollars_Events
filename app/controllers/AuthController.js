@@ -63,9 +63,6 @@ exports.signup = async (req, res) => {
             return;
           }
 
-          const token = signToken(user._id);
-          res.send({ token });
-
           res.send({ message: "User was registered successfully!" });
           //Send to user's email
         });
