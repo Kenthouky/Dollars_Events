@@ -33,7 +33,7 @@ require('./app/routes/user.js')(app);
 
 // Authentication
 db.mongoose
-	.connect('mongodb+srv://dollars:currency@cluster0.gh4jygf.mongodb.net/?retryWrites=true&w=majority', {
+	.connect(process.env.DATABASE, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	})

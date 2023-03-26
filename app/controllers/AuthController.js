@@ -1,4 +1,4 @@
-const config = require("../../config.env");
+const config = require("../../.env");
 const db = require("../models");
 const User = db.user;
 const Role = db.role;
@@ -65,6 +65,7 @@ exports.signup = async (req, res) => {
 
           res.send({ message: "User was registered successfully!" });
           //Send to user's email
+          await emailService.sendEmail(req.body.email, req.body.name);
         });
       });
     }
