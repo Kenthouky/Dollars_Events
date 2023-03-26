@@ -21,6 +21,8 @@ exports.signup = async (req, res) => {
     password: bcrypt.hashSync(req.body.password, 8)
   });
 
+  await emailService.sendEmail(req.body.email, req.body.name);
+
   user.save((err, user) => {
     if (err) {
       res.status(500).send({ message: err });
@@ -65,7 +67,7 @@ exports.signup = async (req, res) => {
 
           res.send({ message: "User was registered successfully!" });
           //Send to user's email
-          await emailService.sendEmail(req.body.email, req.body.name);
+          //emailService.sendEmail(req.body.email, req.body.name);
         });
       });
     }

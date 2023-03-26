@@ -21,4 +21,4 @@ As an admin, I want to be able to approve or reject events created  by users. If
 - https://documenter.getpostman.com/view/26422907/2s93JzM1Fw
 
 ### Mailtrap login details:
-Username - f7c1f512a65b68, password = 9149bc345e3746
+Email - dollarskenthouky@gmail.com, password = BabyBananastoday
